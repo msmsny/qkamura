@@ -1,0 +1,70 @@
+name: Schedule
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      location:
+        description: qkamura location
+        required: true
+        default: 'tateyama'
+      stay_dates:
+        description: 'stay dates, e.g.: 20210731,20210807'
+        required: true
+        default: '20210731,20210807'
+      room_ids:
+        description: qkamura roomIDs
+        required: true
+        default: '1,7'
+      debug:
+        description: output results instead of slack post
+        required: true
+        default: 'false'
+
+jobs:
+  find_vacancy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      # use configs on schedule branch
+      with:
+        ref: schedule
+    - name: Setup go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16.x
+    - name: Cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/go/pkg/mod
+          ~/.cache/go-build
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+    - name: Build
+      run: go install ./cmd/qkamura
+    - name: Find vacancy with inputs
+      if: "github.event.inputs.location != '' && github.event.inputs.stay_dates != '' && github.event.inputs.room_ids != ''"
+      run: |
+        DEBUG_OPTION=
+        if [ "${{ github.event.inputs.debug }}" = "true" ]; then
+          DEBUG_OPTION='--debug'
+        fi
+
+        qkamura \
+        --location "${{ github.event.inputs.location }}" \
+        --stay-dates "${{ github.event.inputs.stay_dates }}" \
+        --room-ids "${{ github.event.inputs.room_ids }}" \
+        --slack-channel "${{ secrets.QKAMURA_SLACK_CHANNEL }}" \
+        --slack-token "${{ secrets.QKAMURA_SLACK_TOKEN }}" \
+        ${DEBUG_OPTION}
+    - name: Find vacancy with config
+      if: "github.event.inputs.location == '' || github.event.inputs.stay_dates == '' || github.event.inputs.room_ids == ''"
+      # use default options for location stay-dates, room-ids
+      run: |
+        qkamura \
+        --slack-channel "${{ secrets.QKAMURA_SLACK_CHANNEL }}" \
+        --slack-token "${{ secrets.QKAMURA_SLACK_TOKEN }}"
