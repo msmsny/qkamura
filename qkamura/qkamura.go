@@ -89,9 +89,9 @@ func NewQkamuraCommand() *cobra.Command {
 
 	flags := cmds.Flags()
 	flags.SortFlags = false
-	location = flags.String("location", "", "qkamura location, e.g.: tateyama, izu")
-	stayDates = flags.IntSlice("stay-dates", []int{}, "stay dates, e.g.: 20210731,20210807")
-	roomIDs = flags.IntSlice("room-ids", []int{}, `qkamura roomIDs:
+	location = flags.String("location", "tateyama", "qkamura location, e.g.: tateyama, izu")
+	stayDates = flags.IntSlice("stay-dates", []int{20210731, 20210807}, "stay dates, e.g.: 20210731,20210807")
+	roomIDs = flags.IntSlice("room-ids", []int{1, 7}, `qkamura roomIDs:
 tateyama:
 	1: 【オーシャンビュー／禁煙／３０㎡】<br>和室１０畳　バス・トイレ・広縁付き
 	3: 【オーシャンビュー／禁煙】　洋室ツイン　バス・トイレ付
@@ -110,9 +110,6 @@ izu:
 	debug = flags.Bool("debug", false, "output results instead of slack post")
 	flagErrors = append(
 		flagErrors,
-		cobra.MarkFlagRequired(flags, "location"),
-		cobra.MarkFlagRequired(flags, "stay-dates"),
-		cobra.MarkFlagRequired(flags, "room-ids"),
 		cobra.MarkFlagRequired(flags, "slack-channel"),
 		cobra.MarkFlagRequired(flags, "slack-token"),
 	)
