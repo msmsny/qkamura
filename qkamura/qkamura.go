@@ -36,6 +36,11 @@ func NewQkamuraCommand() *cobra.Command {
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		PreRunE: func(cmd *cobra.Command, args []string) error {
+			for _, err := range flagErrors {
+				if err != nil {
+					return err
+				}
+			}
 			// 空文字チェックはMarkFlagRequiredでするためここでは空文字チェック以外
 			if _, ok := locationIDMap[*location]; !ok && *location != "" {
 				return fmt.Errorf("invalid location: %s", *location)
