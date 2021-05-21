@@ -1,0 +1,27 @@
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - govet
+    - structcheck
+    - varcheck
+    - ineffassign
+    - deadcode
+    - typecheck
+
+    - gofmt
+    - bodyclose
+    - gosec
+    - rowserrcheck
+    - unparam
+
+issues:
+  exclude-rules:
+    # G107: Potential HTTP request make with variable url
+    # when http.Get() argument is variable, G107 is detected
+    - linters:
+        - gosec
+      text: 'G107:'

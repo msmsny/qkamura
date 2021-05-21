@@ -1,0 +1,27 @@
+name: Vulnerability scan
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    types:
+    - opened
+    - synchronize
+  schedule:
+  - cron: '47 10 1 * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16.x
+    - name: Write go.list
+      run: go list -json -m all > go.list
+    - name: Nancy
+      uses: sonatype-nexus-community/nancy-github-action@main
