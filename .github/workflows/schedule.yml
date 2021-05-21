@@ -46,8 +46,8 @@ jobs:
           ${{ runner.os }}-go-
     - name: Build
       run: go install .
-    - name: Find vacancy with inputs
-      if: "github.event.inputs.location != '' && github.event.inputs.stay_dates != '' && github.event.inputs.room_ids != ''"
+    - name: Find vacancy on workflow_dispatch
+      if: "github.event_name == 'workflow_dispatch'"
       run: |
         DEBUG_OPTION=
         if [ "${{ github.event.inputs.debug }}" = "true" ]; then
@@ -61,8 +61,8 @@ jobs:
         --slack-channel "${{ secrets.QKAMURA_SLACK_CHANNEL }}" \
         --slack-token "${{ secrets.QKAMURA_SLACK_TOKEN }}" \
         ${DEBUG_OPTION}
-    - name: Find vacancy with config
-      if: "github.event.inputs.location == '' || github.event.inputs.stay_dates == '' || github.event.inputs.room_ids == ''"
+    - name: Find vacancy on schedule
+      if: "github.event_name == 'schedule'"
       # use default options for location stay-dates, room-ids
       run: |
         qkamura \
