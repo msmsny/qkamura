@@ -45,7 +45,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-go-
     - name: Build
-      run: go install ./cmd/qkamura
+      run: go install .
     - name: Find vacancy with inputs
       if: "github.event.inputs.location != '' && github.event.inputs.stay_dates != '' && github.event.inputs.room_ids != ''"
       run: |
