@@ -1,0 +1,137 @@
+
+getStockData({ "yado_id":'23260012', "yado_other_id":'tateyama', "member_id":'0', "room_id":'all_none', "input_data":'', "rooms":[
+
+{ "room_id":'1', "room_name":'\u3010\u30aa\u30fc\u30b7\u30e3\u30f3\u30d3\u30e5\u30fc\uff0f\u7981\u7159\uff0f\uff13\uff10\u33a1\u3011\u003cbr\u003e\u548c\u5ba4\uff11\uff10\u7573\u3000\u30d0\u30b9\u30fb\u30c8\u30a4\u30ec\u30fb\u5e83\u7e01\u4ed8\u304d', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2011/11/7', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'image_20180912174606_4.jpg', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'1', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'4', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'13', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'2', "yoyaku_num":'12', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'10', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'14', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'2', "yoyaku_num":'14', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'1', "yoyaku_num":'11', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'16', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+,
+{ "room_id":'7', "room_name":'\u3010\u30aa\u30fc\u30b7\u30e3\u30f3\u30d3\u30e5\u30fc\uff0f\u7981\u7159\uff0f\uff13\uff10\u33a1\u3011\u003cbr\u003e\u548c\u6d0b\u5ba4\u30c4\u30a4\u30f3\u3000\u5c0f\u4e0a\u304c\u308a\u306e\u5ea7\u6577\u30fb\u30c8\u30a4\u30ec\u4ed8\u304d', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2013/1/18', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'image_20180912173935_1.jpg', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'1', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'1', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'0', "yoyaku_num":'1', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'1', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+,
+{ "room_id":'4', "room_name":'\u3010\u30aa\u30fc\u30b7\u30e3\u30f3\u30d3\u30e5\u30fc\uff0f\u7981\u7159\uff0f\uff13\uff10\u33a1\u3011\u003cbr\u003e\u6d0b\u5ba4\u30c4\u30a4\u30f3\u3000\u30c8\u30a4\u30ec\u4ed8\u304d', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2011/11/9', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'image_20180912174606_2.jpg', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'1', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'4', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'8', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'0', "yoyaku_num":'11', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'10', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'9', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'0', "yoyaku_num":'8', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'0', "yoyaku_num":'6', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'2', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+,
+{ "room_id":'3', "room_name":'\u3010\u30aa\u30fc\u30b7\u30e3\u30f3\u30d3\u30e5\u30fc\uff0f\u7981\u7159\u3011\u3000\u6d0b\u5ba4\u30c4\u30a4\u30f3\u3000\u30d0\u30b9\u30fb\u30c8\u30a4\u30ec\u4ed8', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2011/11/9', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'1', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+,
+{ "room_id":'6', "room_name":'\u30ec\u30b9\u30c8\u30e9\u30f3\u4f1a\u5834', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2012/5/2', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'image_20111109105550_1.jpg', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'2', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+,
+{ "room_id":'8', "room_name":'\u3010\u30aa\u30fc\u30b7\u30e3\u30f3\u30d3\u30e5\u30fc\uff0f\u7981\u7159\uff0f\uff13\uff10\u33a1\u3011\u6d0b\u5ba4\u30c4\u30a4\u30f3\u3000\u5c0f\u4e0a\u304c\u308a\u30fb\u30c8\u30a4\u30ec\u4ed8\u304d', "room_name_eng":'', "room_name_cht":'', "room_name_chs":'', "room_name_kor":'', "room_name_spa":'', "base_aki_num":'0',
+	"standard_aki_num":'0', "room_start_date":'2019/8/10', "room_end_date":'2023/3/31',
+	"room_status":'1', "img_name":'image_20190810183155_1.jpg', "room_no_smoking":'1', "room_smoking":'0', "stay_place":'1', "stay_style":'1', "aki" : [
+
+{ "aki_date":'2021/7/31', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/1', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/2', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/3', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/4', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/5', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/6', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+,
+{ "aki_date":'2021/8/7', "aki_num":'0', "yoyaku_num":'0', "sold_out_f":'0', "holiday_f":'0'  }
+
+]}
+
+],"yoyaku_root":'',"airport_flg":'',"airport_going":'',"airport_return":'',
+	"tax_disp":'0',"tax_start_date":'2019/04/01',"tax_end_date":'2021/03/31'})
