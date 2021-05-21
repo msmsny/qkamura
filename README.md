@@ -1,5 +1,9 @@
 # qkamura
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/msmsny/qkamura)](https://goreportcard.com/report/github.com/msmsny/qkamura)
+[![Test](https://github.com/msmsny/qkamura/actions/workflows/test.yml/badge.svg)](https://github.com/msmsny/qkamura/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/msmsny/qkamura/badge.svg?branch=master)](https://coveralls.io/github/msmsny/qkamura?branch=master)
+
 Qkamura vacancy notifier
 
 ## Install
