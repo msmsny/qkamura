@@ -10,6 +10,7 @@ on:
     - synchronize
   schedule:
   - cron: '47 10 1 * *'
+  workflow_dispatch:
 
 jobs:
   build:
