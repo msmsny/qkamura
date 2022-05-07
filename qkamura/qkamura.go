@@ -89,9 +89,9 @@ func NewQkamuraCommand() *cobra.Command {
 
 	flags := cmds.Flags()
 	flags.SortFlags = false
-	location = flags.String("location", "tateyama", "qkamura location, e.g.: tateyama, izu")
-	stayDates = flags.IntSlice("stay-dates", []int{20210806}, "stay dates, e.g.: 20210731,20210807")
-	roomIDs = flags.IntSlice("room-ids", []int{1}, `qkamura roomIDs:
+	location = flags.String("location", "izu", "qkamura location, e.g.: tateyama, izu")
+	stayDates = flags.IntSlice("stay-dates", []int{20220729, 20220730, 20220731, 20220801, 20220802, 20220803, 20220804, 20220805, 20220806, 20220807, 20220808, 20220809, 20220810, 20220811, 20220812, 20220813}, "stay dates, e.g.: 20210731,20210807")
+	roomIDs = flags.IntSlice("room-ids", []int{1, 2}, `qkamura roomIDs:
 tateyama:
 	1: 【オーシャンビュー／禁煙／３０㎡】<br>和室１０畳　バス・トイレ・広縁付き
 	3: 【オーシャンビュー／禁煙】　洋室ツイン　バス・トイレ付
