@@ -6,10 +6,7 @@ linters:
     - unused
     - gosimple
     - govet
-    - structcheck
-    - varcheck
     - ineffassign
-    - deadcode
     - typecheck
 
     - gofmt

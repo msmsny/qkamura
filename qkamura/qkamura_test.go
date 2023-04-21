@@ -2,10 +2,10 @@ package qkamura
 
 import (
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
+	"os"
 	"testing"
 
 	"github.com/spf13/cobra"
@@ -86,7 +86,7 @@ func TestRun(t *testing.T) {
 		debug        = false
 	)
 	// response has vacancy for stayDates: 20210806, roomID: 1
-	qkamuraResponse, err := ioutil.ReadFile("testdata/qkamura_response.txt")
+	qkamuraResponse, err := os.ReadFile("testdata/qkamura_response.txt")
 	require.NoError(t, err)
 
 	testCases := map[string]struct {

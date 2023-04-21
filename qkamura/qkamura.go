@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"math"
 	"net/http"
 	"strconv"
@@ -275,7 +275,7 @@ func (q *qkamuraClient) get(location string, startDate, endDate time.Time) (*Res
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != 200 {
-		rawBody, err := ioutil.ReadAll(resp.Body)
+		rawBody, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, fmt.Errorf("qkamuraClient response is %d", resp.StatusCode)
 		}
@@ -283,9 +283,9 @@ func (q *qkamuraClient) get(location string, startDate, endDate time.Time) (*Res
 	}
 
 	// bodyを加工してJSONを取り出す
-	rawBody, err := ioutil.ReadAll(resp.Body)
+	rawBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("ioutil.ReadAll: %s", err)
+		return nil, fmt.Errorf("io.ReadAll: %s", err)
 	}
 	body := string(rawBody)
 	body = strings.Replace(body, "getStockData(", "", 1)
@@ -345,7 +345,7 @@ func (s *slackClient) post(channel, token, message string) error {
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != 200 {
-		rawBody, err := ioutil.ReadAll(resp.Body)
+		rawBody, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return fmt.Errorf("slackClient response is %d", resp.StatusCode)
 		}
