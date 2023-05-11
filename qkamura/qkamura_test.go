@@ -76,6 +76,29 @@ func TestCommand(t *testing.T) {
 	}
 }
 
+// TestCommandEnv tests command environment variables validation
+func TestCommandEnv(t *testing.T) {
+	var (
+		location     = "tateyama"
+		stayDates    = "20210731,20210807"
+		roomIDs      = "1,7"
+		slackChannel = "dummy-channel"
+		slackToken   = "dummy-token"
+	)
+	cmd := NewQkamuraCommand()
+	// noop stub
+	cmd.RunE = func(*cobra.Command, []string) error {
+		return nil
+	}
+	require.NoError(t, cmd.Flags().Set("location", location))
+	require.NoError(t, cmd.Flags().Set("stay-dates", stayDates))
+	require.NoError(t, cmd.Flags().Set("room-ids", roomIDs))
+	os.Setenv("QKAMURA_SLACK_CHANNEL", slackChannel)
+	os.Setenv("QKAMURA_SLACK_TOKEN", slackToken)
+
+	assert.NoError(t, cmd.Execute())
+}
+
 // TestRun tests normal test cases and some validation
 func TestRun(t *testing.T) {
 	var (

@@ -7,6 +7,7 @@ import (
 	"io"
 	"math"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -116,6 +117,17 @@ izu:
 		cobra.MarkFlagRequired(flags, "slack-channel"),
 		cobra.MarkFlagRequired(flags, "slack-token"),
 	)
+
+	cobra.OnInitialize(func() {
+		if slackChannelEnv := os.Getenv("QKAMURA_SLACK_CHANNEL"); *slackChannel == "" && slackChannelEnv != "" {
+			*slackChannel = slackChannelEnv
+			flags.Set("slack-channel", slackChannelEnv) //nolint:errcheck
+		}
+		if slackTokenEnv := os.Getenv("QKAMURA_SLACK_TOKEN"); *slackToken == "" && slackTokenEnv != "" {
+			*slackToken = slackTokenEnv
+			flags.Set("slack-token", slackTokenEnv) //nolint:errcheck
+		}
+	})
 
 	return cmds
 }
