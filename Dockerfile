@@ -5,7 +5,7 @@ ENV CGO_ENABLED 0
 
 WORKDIR /app
 COPY . .
-RUN go install .
+RUN go install -ldflags '-w -s' -trimpath .
 
 FROM gcr.io/distroless/static:nonroot
 
